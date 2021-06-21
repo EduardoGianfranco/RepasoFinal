@@ -26,7 +26,7 @@ namespace RepasoFinal
         public void ConfigureServices(IServiceCollection services)
         {
             services.AddControllersWithViews();
-            services.AddDbContext<BuscoContext>(dco => dco.UseSqlServer("server=DESKTOP-HD2QEE3;jdatabase=BuscoBD;integrated security=true"));
+            services.AddDbContext<BuscoContext>(dco => dco.UseSqlServer("server=DESKTOP-HD2QEE3;database=BuscoBD;integrated security=true"));
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
