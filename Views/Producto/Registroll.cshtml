@@ -1,0 +1,42 @@
+@model Producto //IMPORTANTISIMOOOOOO
+
+<h1>Registrar producto pa comprarsh</h1>
+
+<div asp-validation-summary="All"></div>
+
+<form method = "post">
+    <div class="form-group">
+        <label asp-for="Nombre"></label>
+        <input asp-for="Nombre" class="form-control"/>
+    </div>
+    <div class="form-group">
+        <label asp-for="Precio"></label>
+        <input asp-for="Precio" class="form-control"/>
+    </div>
+    <div class="form-group">
+        <label asp-for="Foto"></label>
+        <input asp-for="Foto" class="form-control"/>
+    </div>
+    <div class="form-group">
+        <label asp-for="Descripcion"></label>
+        <textarea asp-for="Descripcion" class="form-control"></textarea>
+    </div>
+    <div class="form-group">
+        <label asp-for="NombreComprador"></label>
+        <input asp-for="NombreComprador" class="form-control"/>
+    </div>
+    <div class="form-group">
+        <label asp-for="CelularComprador"></label>
+        <input asp-for="CelularComprador" class="form-control"/>
+    </div>
+    <div class="form-group">
+        <label asp-for="LugarCompra"></label>
+        <input asp-for="LugarCompra" class="form-control"/>
+    </div>
+    <div class="form-group">
+        <label asp-for="Categoria"></label>
+        <select asp-for="CategoriaId" asp-items="ViewBag.Categ" class="form-control"></select> @*Aquí va el ViewBag creado en el ProductoController*@
+    </div>
+    
+    <button class="btn btn-primary">Registrar</button>
+</form>
