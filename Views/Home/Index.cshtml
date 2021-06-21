@@ -1,0 +1,21 @@
+﻿@model List<Producto>
+
+@{
+    ViewData["Title"] = "Home Page";
+}
+
+@if(Model.Count() == 0){
+    <p class="text-center">Srry wew aun no hay nada en la lista v:</p>
+}else{
+    <div class="row">
+        @foreach (var producto in Model)
+        {
+            <div class="col-4 text-center">
+                    <h2>@producto.Nombre</h2>
+                    <img src="@producto.Foto" class="img-fluid" />
+                    <p>Precio: @producto.Precio.ToString("C")</p>
+                    <p>@producto.Descripcion</p>
+            </div>
+        }
+    </div>
+}
